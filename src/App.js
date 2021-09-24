@@ -6,6 +6,7 @@ import PokemonBox from './components/pokemon-box';
 import {mapSelectItems} from './helpers/functions';
 import PokemonPreview from './components/pokemon-preview';
 import Filter from "./components/filter";
+import LoadMore from "./components/load-more";
 
 export const App = () => {
   const [allPokemons, setAllPokemons] = useState([]);
@@ -78,9 +79,7 @@ export const App = () => {
               }
             )}
           </div>
-          <div className='load-more' onClick={loadMore}>
-            Load more
-          </div>
+          <LoadMore loadMore={loadMore}/>
         </div>
         <div className='pokemon-preview__container'>
           {singlePokemon && box && (
